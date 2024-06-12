@@ -7,6 +7,10 @@ export const ROUTES = {
     path: "/projects",
     title: "Projects",
   },
+  projectDetail: {
+    path: "/project/:slug",
+    title: "Project Detail",
+  },
   skills: {
     path: "/skills",
     title: "Knowledge",
@@ -14,6 +18,10 @@ export const ROUTES = {
   services: {
     path: "/services",
     title: "Services",
+  },
+  serviceDetail: {
+    path: "/services/:slug",
+    title: "Service Detail",
   },
   about: {
     path: "/about",

@@ -21,17 +21,37 @@ export const GET_PROJECTS_DATA = gql`
   }
 `;
 
+export const GET_PROJECT_DETAIL = gql`
+  query GetProjectDetail($slug: String!) {
+    project(where: { slug: $slug }) {
+      client {
+        name
+        smallLogo {
+          url
+        }
+      }
+      title
+      description
+      slug
+      url
+      github
+      image {
+        url
+      }
+    }
+  }
+`;
+
 export const GET_ALL_SKILLS = gql`
   query GetAllSkills {
-  skillsets {
-    level
-    logo {
-      url
+    skillsets {
+      level
+      logo {
+        url
+      }
+      name
     }
-    name
   }
-}
-
 `;
 // export const GET_PROJECT_DETAIL = gql`
 //   query GetProjectDetail($slug: String!) {
@@ -123,6 +143,7 @@ export const GET_SEARCH_DATA = gql`
         name
       }
       title
+      slug
     }
     skillsets(where: { _search: $_search }) {
       name

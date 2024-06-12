@@ -31,6 +31,16 @@ const router = createBrowserRouter(
       <Route path={ROUTES.skills.path} element={<SkillPage />} />,
       <Route path={ROUTES.about.path} element={<AboutPage />} />,
       <Route path={ROUTES.searchResults.path} element={<SearchResults />} />,
+      <Route
+        path={ROUTES.projectDetail.path}
+        element={<DetailPage />}
+      />
+      ,
+      <Route
+        path={ROUTES.serviceDetail.path}
+        element={<DetailPage type="service" />}
+      />
+      ,
     </Route>
   )
 );

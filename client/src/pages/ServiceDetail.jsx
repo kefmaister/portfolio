@@ -1,13 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { GET_PROJECT_DETAIL } from "../graphql/queries";
+import { GET_PROJECT_DETAIL, GET_BLOG_DETAIL, GET_SERVICE_DETAIL } from "../graphql/queries";
 import Parse from "html-react-parser";
 import style from "./css/detail.module.css";
 
 export default function DetailPage({ type }) {
   const { slug } = useParams();
-  const { loading, error, data } = useQuery(GET_PROJECT_DETAIL, {
+  let query;
+  if (type === "project") {
+    query = GET_PROJECT_DETAIL;
+  } else if (type === "service") {
+    query = GET_SERVICE_DETAIL;
+  }
+  const { loading, error, data } = useQuery(query, {
     variables: { slug },
   });
 
@@ -16,5 +22,5 @@ export default function DetailPage({ type }) {
 
   const detail = data[type];
 
-  return <div className={style.container}>{data.project.description}</div>;
+  return <div className={style.container}>{Parse(detail.content.html)}</div>;
 }

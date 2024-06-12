@@ -12,6 +12,7 @@ const SearchResults = () => {
   if (error) return <p>Error :{error.message}</p>;
 
   const searchResults = data;
+  console.log(searchResults);
   return (
     <div className={styles.container}>
       <h1>Search Results for: {searchTerm}</h1>
@@ -20,22 +21,15 @@ const SearchResults = () => {
           if (searchResults[key] && searchResults[key].length > 0) {
             return (
               <div key={key}>
-                {key === "programs" || key === "teamMembers" ? (
-                  <Link to={key === "programs" ? "/program" : "/team"}>
-                    <h2>{key}</h2>
-                  </Link>
-                ) : (
-                  <h2>{key}</h2>
-                )}
+                <h2>{key}</h2>
                 {searchResults[key].map((item, index) => (
                   <div key={index}>
-                    <h3 className={styles.title}>
-                      {item.firstname} {item.lastname}
-                    </h3>
-                    <Link to={`/blog/${item.slug}`}>
-                      <h3 className={styles.title}>{item.name}</h3>
-                    </Link>
-                    <h3 className={styles.title}>{item.course}</h3>
+                    {key === "projects" && (
+                      <Link to={`/project/${item.slug}`}>
+                        <h3 className={styles.title}>{item.title}</h3>
+                      </Link>
+                    )}
+                    {key === "skillsets" && <h3>{item.name}</h3>}
                   </div>
                 ))}
               </div>

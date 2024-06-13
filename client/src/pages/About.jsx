@@ -1,85 +1,108 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./css/course.module.css";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function About() {
+  const [isDarkMode] = useContext(ThemeContext);
+
   return (
     <div className={styles.container}>
       <div className={styles.headerContainer}>
-        <div className={styles.headerText}>
-          <h1>Programmeren</h1>
-          <small>
-            <i>Graduaat</i>
-          </small>
-          <p>
-            Tijdens het Graduaat Programmeren leer je het zichtbare (front-end)
-            en onzichtbare (backend) deel van web- en mobiele toepassingen
-            ontwikkelen. Je wordt specialist in JavaScript, HTML, CSS en vult
-            jouw skills aan met o.a. PHP, Python, UI/UX. Naast deze technische
-            kant, vergaar je ook algemene ICT-skills. Je leert ook hoe digital
-            agencies werken en wat jouw rol hierbinnen zal zijn. Na deze
-            opleiding kan je aan de slag als front-end developer, full-stack
-            JavaScript developer, PHP developer, Web Designer + Coder of CMS
-            Themer.
-          </p>
-        </div>
-        <img className={styles.image} src="/assets/img/pgm.jpg" alt="" />
+        <div className={styles.headerText}></div>
       </div>
       <div className={styles.articleContainer}>
         <div>
-          <h2>Erkend knelpuntberoep</h2>
+          <h1>Kevin Dworschak</h1>
+          <small>
+            <i>Full stack JavaScript Developer</i>
+          </small>
           <p>
-            Het tekort aan programmeurs in Vlaanderen is zo groot dat de VDAB
-            ons Graduaat Programmeren actief promoot onder werkzoekenden.
-            Kandidaten die aan alle voorwaarden voldoen, krijgen hun
-            inschrijvingsgeld terugbetaald en ontvangen een forfaitaire
-            tussenkomst voor leerkosten zoals de aankoop van een laptop. Verder
-            is er nog een vergoeding voor hun verplaatsingen, en worden
-            eventuele kosten voor kinderopvang terugbetaald.
+            At 25, I'm a programming student with a head full of code and a
+            heart that beats to the rhythm of the Caribbean. My Dominican roots
+            fuel my passion for both software development and capturing the
+            world through photography. Whether it's building the next big app or
+            freezing a perfect sunset, I bring a touch of island energy to
+            everything I do.
           </p>
         </div>
         <div>
-          <h2>Al doende leren</h2>
+          {isDarkMode ? (
+            <img
+              className={styles.image}
+              src="/assets/img/20240310_LIQUICITYAMSTERDAM_TIFFANYKONINGS_0420_056_HR.jpg"
+              alt="Liquicity"
+            />
+          ) : (
+            <img
+              className={styles.image}
+              src="/assets/img/MinishootsbyBenWylin_JulieenKevin-22.jpg"
+              alt=""
+            />
+          )}
+        </div>
+        <div>
+          <h2>Interests</h2>
           <p>
-            De focus in de opleiding ligt op de praktijk. Van bij de start leer
-            je theorie omzetten in praktijk aan de hand van concrete opdrachten.
-            Zo werk je in het vak @Work real life cases van digital agencies uit
-            onder begeleiding van de docenten. Je gaat op kijkstage en doet mee
-            aan hackathons. In het tweede jaar draai je mee in een echt bedrijf
-            en word je gecoacht door de docenten. Daarnaast weerspiegelt deze
-            opleiding de verscheidenheid van de maatschappij vandaag de dag.
-            Jongeren en ouderen, Vlamingen en niet-Vlamingen, jullie gaan samen
-            aan de slag binnen deze opleiding en plukken de vruchten van elkaar
-            werk- en levenservaring.
+            My life's a vibrant mix – the rhythm of dance floors fuels my
+            energy, like a jolt of electricity coursing through my veins. The
+            melody of a song gets my soul soaring, whether it's a heart-pounding
+            anthem or a soulful ballad that tugs at my emotions. When I'm not
+            slaying dragons in fantastical video game worlds, I'm out there
+            seeking real-life adventures. Whether it's exploring a new city,
+            getting lost in the awe-inspiring beauty of nature, or simply trying
+            a new cuisine, my wanderlust is ever-present. But at the end of the
+            day, there's nothing quite like the joy of social gatherings.
+            Sharing laughter with friends, new and old, and forging connections
+            over shared experiences is what truly fills my cup. It's in these
+            moments of connection that I feel most alive.
           </p>
         </div>
         <div>
-          <h2>Uitstekende begeleiding</h2>
+          <h2>All about music</h2>
           <p>
-            Je krijgt les in relatief kleine groepen. Verschillende coaches
-            staan steeds paraat om je vragen te beantwoorden. Trajectcoaches
-            volgen je nauwgezet op en sturen bij waar nodig. Je kan gebruik
-            maken van de leerbegeleiding die wordt aangeboden voor onderwerpen
-            zoals faalangst, uitstelgedrag, planning, timemanagement, ... We
-            werken ook in verschillende niveaus, dus je kan perfect starten
-            zonder enige voorkennis. Pik je kennis sneller op? Dan voorzien we
-            extra uitdagende opdrachten.
+            Imagine waking up to a symphony of sound – that's my daily routine.
+            Music isn't just an accessory, it's the soundtrack to my life.
+            Upbeat melodies greet the dawn, chasing away sleep and setting the
+            mood for the day. Coding becomes an artistic dance with a perfectly
+            chosen drum and bass beat pulsing in my ears, keeping me focused and
+            fueled by the rhythm. The kitchen transforms into a fiesta when it's
+            time to cook, salsa or merengue adding a vibrant energy to every
+            stir and sizzle. But as the sun dips low, the tempo slows with me.
+            Jazz rap or smooth, soulful melodies become the soundtrack to
+            unwinding, washing away the day's stress and allowing me to drift
+            into relaxation. Music isn't just background noise for me; it's the
+            ever-present companion that weaves its magic through every aspect of
+            my world.
           </p>
         </div>
         <div>
-          <h2>Ervaring op je cv</h2>
-          <p>
-            Werkplekleren en bootcamps maken een groot en belangrijk deel uit
-            van een graduaat. Hierbij ga je concrete opdrachten en vragen van
-            bedrijven aanpakken en tot een goed einde brengen. Zo doe je
-            werkervaring op tijdens je opleiding en kan je hiermee uitpakken
-            tijdens een sollicitatiegesprek of in je portfolio.
-          </p>
+          {isDarkMode ? (
+            <img
+              className={styles.image}
+              src="/assets/img/liquicity.jpg"
+              alt="Liquicity"
+            />
+          ) : (
+            <img
+              className={styles.image}
+              src="/assets/img/JulieenKevin_BWPH-8.jpg"
+              alt=""
+            />
+          )}
         </div>
         <div>
-          <h2>Bachelordiploma</h2>
+          <h2>Back to the roots</h2>
           <p>
-            Dat kan na je graduaatsopleiding via een verkort traject (minstens
-            90 studiepunten of 1,5 jaar).
+            My heritage is a beautiful tapestry woven from two distinct threads.
+            Born in Belgium, I carry the legacy of my Flemish father. Yet, the
+            vibrant colors of the Dominican Republic paint a strong influence on
+            my life, thanks to my Dominican mother. Though I haven't yet had the
+            chance to explore the DR myself, it holds a special place in my
+            heart. Perhaps that's where my love for anime and all things
+            Japanese comes in! Maybe in a past life, I walked the streets of
+            Tokyo? One day, I hope to visit both the Dominican Republic and
+            Japan, fully embracing the rich tapestry of cultures that make me
+            who I am.
           </p>
         </div>
       </div>

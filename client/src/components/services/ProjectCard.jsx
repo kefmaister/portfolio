@@ -42,8 +42,13 @@ export default function ProjectCard({ data }) {
                 />
               </Tooltip>
             ))}
-          <Box sx={{ marginLeft: "auto" }}>
-            <ViewBtn text={"Github"} link={`${data.github}`} newTab={true} />
+          <Box sx={{ marginLeft: "auto", pr: 1, pb: 1 }}>
+            <ViewBtn
+              mr={"2rem"}
+              text={"Github"}
+              link={`${data.github}`}
+              newTab={true}
+            />
             <ViewBtn text={"Website"} link={`${data.url}`} newTab={true} />
           </Box>
         </Box>

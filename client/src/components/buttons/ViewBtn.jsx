@@ -2,7 +2,14 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
-export default function ViewBtn({ text, link, border, newTab = false }) {
+export default function ViewBtn({
+  text,
+  link,
+  border,
+  newTab = false,
+  mr = 0,
+  mb = 0,
+}) {
   const LinkBehavior = React.forwardRef((props, ref) =>
     newTab ? (
       <a
@@ -27,6 +34,8 @@ export default function ViewBtn({ text, link, border, newTab = false }) {
         fontWeight: "bold",
         fontFamily: "Montserrat, sans-serif",
         borderRadius: border,
+        marginRight: mr,
+        marginBottom: mb,
         "&:hover": {
           backgroundColor: "var(--dark-orange)",
         },

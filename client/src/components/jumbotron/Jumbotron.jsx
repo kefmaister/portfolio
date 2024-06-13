@@ -16,21 +16,21 @@ export default function Jumbotron() {
           </span>
         </p>
         <p className={style.content}>
-          Geboren en getogen in<span className={style.bolder}> Brugge</span>.
+          Born and raised in<span className={style.bolder}> Bruges</span>.
           <br />
-          Studerend in
-          <span className={style.bolder}> Gent </span>
-          in verschillende richtingen:
+          Studied in
+          <span className={style.bolder}> Ghent </span>
+          in various fields:
         </p>
         <ul>
-          <li>Graduaat Programmeren</li>
-          <li>Audiovisual Design</li>
+          <li>Graduate in programming</li>
+          <li>Bachlor Audiovisual Design</li>
         </ul>
         <p className={style.content}>
           Bekijk <span className={style.bolder}> mijn projecten </span>op deze
           website!
         </p>
-        <ViewBtn link={"/projects"} text={"View more"} />
+        <ViewBtn link={"/projects"} text={"View projects"} />
       </div>
       <Image />
     </div>

@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import ViewBtn from "../buttons/ViewBtn";
+import { Tooltip } from "@mui/material";
 
 export default function ProjectCard({ data }) {
   return (
@@ -30,13 +31,17 @@ export default function ProjectCard({ data }) {
           </Typography>
         </CardContent>
         <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-          {data.skillsets.map((skill) => (
-            <Avatar
-              alt={skill.name}
-              src={skill.logo.url}
-              sx={{ width: 30, height: 30, marginRight: 1 }}
-            />
-          ))}
+          {[...data.skillsets] // Create a shallow copy of the array
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((skill) => (
+              <Tooltip title={skill.name} key={skill.name}>
+                <Avatar
+                  alt={skill.name}
+                  src={skill.logo.url}
+                  sx={{ width: 30, height: 30, marginRight: 1 }}
+                />
+              </Tooltip>
+            ))}
           <Box sx={{ marginLeft: "auto" }}>
             <ViewBtn text={"Github"} link={`${data.github}`} newTab={true} />
             <ViewBtn text={"Website"} link={`${data.url}`} newTab={true} />

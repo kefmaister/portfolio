@@ -31,7 +31,7 @@ const SearchResults = () => {
                 {searchResults[key].map((item, index) => (
                   <div key={index}>
                     {key === "projects" && (
-                      <Link to={`/project/${item.slug}`}>
+                      <Link to={`/projects`}>
                         <h3 className={styles.title}>{item.title}</h3>
                       </Link>
                     )}

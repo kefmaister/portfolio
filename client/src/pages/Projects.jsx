@@ -1,5 +1,4 @@
 import React from "react";
-import Datas from "../components/blogs/DataViewer";
 import ProjectCard from "../components/services/ProjectCard";
 import { GET_PROJECTS_DATA } from "../graphql/queries";
 import { useQuery } from "@apollo/client";

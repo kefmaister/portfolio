@@ -53,7 +53,12 @@ export default function Root() {
     <main className={style.starWrapper} ref={starWrapperRef}>
       <nav>
         <Link href="/">
-          <img className="logo" src="/assets/img/logo_text.png" alt="home" />
+          <img
+            className="logo"
+            src="/assets/img/wolfgang.png"
+            alt="home"
+            credits="@art_of_asare on Instagram"
+          />
         </Link>
         <Navigation />
       </nav>

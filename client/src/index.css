@@ -31,11 +31,11 @@ nav {
   padding: 2rem;
 }
 .logo {
-  width: 15rem;
+  width: 10rem;
+  margin-left: 5rem;
 }
 .footerLogo {
   width: 20rem;
-  filter: brightness(0) invert(1);
 }
 section {
   margin: 0 auto;
@@ -55,7 +55,7 @@ h1 {
   margin-bottom: 1rem;
 }
 .header {
-  font-size: 11rem;
+  font-size: 8rem;
   text-align: center;
 
   color: var(--dark-orange);

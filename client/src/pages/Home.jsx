@@ -1,7 +1,5 @@
 import React from "react";
 import Jumbotron from "../components/jumbotron/Jumbotron";
-import Projects from "../components/projects/Projects";
-import Datas from "../components/blogs/DataViewer";
 import Service from "../components/services/Service";
 export default function Home() {
   return (

@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.background}></div>
-      <img className="footerLogo" src="/assets/img/full_logo.png" alt="" />
+      <img className="footerLogo" src="/assets/img/KD_emblem.png" alt="wolfgang logo" credits="@art_of_asare on Instagram" />
       <div className={style.contactOptions}>
         <h2>Contact</h2>
         <address>
@@ -36,6 +36,7 @@ export default function Footer() {
         <div className={style.menuContainer}>
           <Link to="/about">About Me</Link>
           <Link to="/projects">Projects</Link>
+          <Link to="/skills">Knowledge</Link>
           <Link to="/services">Services</Link>
         </div>
       </div>

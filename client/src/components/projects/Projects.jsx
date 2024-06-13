@@ -20,24 +20,6 @@ export default function Projects() {
         <h1 className="header">Projects</h1>
       </div>
       <div className={style.container}>
-        {/* <div className={style.textContainer}>
-          <h1>
-            Projecten tijdens <br /> mijn studie!
-          </h1>
-
-          <p className={style.content}>
-            Hier zijn een aantal projecten waar ik <br /> de voorbije jaren aan
-            gewerkt heb.
-          </p>
-          <p className={style.content}>
-            Bekijk meer<span className={style.bolder}> Projecten </span>op mijn
-            andere pagina.
-          </p>
-          <ViewBtn link={"/projects"} text={"View more"} />
-        </div>
-        <div>
-          <Carousel projects={data.projects} />
-        </div> */}
         <ProjectCard data={data.projects} />
       </div>
     </div>

@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
+import ViewBtn from "../buttons/ViewBtn";
 
 export default function ProjectCard({ data }) {
   return (
@@ -33,9 +34,13 @@ export default function ProjectCard({ data }) {
             <Avatar
               alt={skill.name}
               src={skill.logo.url}
-              sx={{ width: 24, height: 24, marginRight: 1 }}
+              sx={{ width: 30, height: 30, marginRight: 1 }}
             />
           ))}
+          <Box sx={{ marginLeft: "auto" }}>
+            <ViewBtn text={"Github"} link={`${data.github}`} newTab={true} />
+            <ViewBtn text={"Website"} link={`${data.url}`} newTab={true} />
+          </Box>
         </Box>
       </Box>
     </Card>

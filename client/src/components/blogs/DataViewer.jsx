@@ -43,7 +43,7 @@ export default function Blogs() {
 
   if (location.pathname === "/") {
     datas = serviceData.services;
-    slug = "/service";
+    slug = datas.title === "Developer" ? "/projects" : "/service";
     title = "Services";
   } else if (location.pathname === "/projects") {
     datas = projectsData.projects;
@@ -93,7 +93,10 @@ export default function Blogs() {
             key={data.id}
           >
             <CardActionArea>
-              <Link className={style.link} to={`${slug}/${data.slug}`}>
+              <Link
+                className={style.link}
+                to={slug === "/projects" ? slug : `${slug}/${data.slug}`}
+              >
                 <CardMedia
                   component="img"
                   height="180"

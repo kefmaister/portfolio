@@ -20,7 +20,7 @@ export const ROUTES = {
     title: "Services",
   },
   serviceDetail: {
-    path: "/services/:slug",
+    path: "/service/:slug",
     title: "Service Detail",
   },
   about: {

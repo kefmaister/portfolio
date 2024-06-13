@@ -74,16 +74,6 @@ p {
   font-size: 1rem;
 }
 
-.member-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 5rem;
-  gap: 5rem;
-}
-
 .background-top {
   background-image: url("./assets/svg/Blue.svg");
   background-position: right -8vw top 21vh;
@@ -100,6 +90,15 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
+}
+.project-container {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 .notFound {
   width: 100%;

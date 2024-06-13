@@ -4,10 +4,12 @@ import Carousel from "../carousel/Carousel";
 import { GET_PROJECTS_DATA } from "../../graphql/queries";
 import style from "./projects.module.css";
 import ViewBtn from "../buttons/ViewBtn";
+import ProjectCard from "../services/ProjectCard";
+import { CircularProgress } from "@mui/material";
 
 export default function Projects() {
   const { loading, error, data } = useQuery(GET_PROJECTS_DATA);
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <CircularProgress />;
   if (error) return <p>Error: {error.message}</p>;
 
   console.log(data);
@@ -18,7 +20,7 @@ export default function Projects() {
         <h1 className="header">Projects</h1>
       </div>
       <div className={style.container}>
-        <div className={style.textContainer}>
+        {/* <div className={style.textContainer}>
           <h1>
             Projecten tijdens <br /> mijn studie!
           </h1>
@@ -35,7 +37,8 @@ export default function Projects() {
         </div>
         <div>
           <Carousel projects={data.projects} />
-        </div>
+        </div> */}
+        <ProjectCard data={data.projects} />
       </div>
     </div>
   );

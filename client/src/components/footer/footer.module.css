@@ -33,6 +33,11 @@
   margin: 1rem 0;
 }
 
+.contactOptions p a{
+  color: var(--white);
+
+}
+
 .socialContainer {
   align-self: flex-start;
   width: fit-content;

@@ -17,6 +17,12 @@ export const GET_PROJECTS_DATA = gql`
       image {
         url
       }
+      skillsets {
+        name
+        logo {
+          url
+        }
+      }
     }
   }
 `;
@@ -150,6 +156,7 @@ export const GET_SEARCH_DATA = gql`
     }
     services(where: { _search: $_search }) {
       title
+      slug
     }
   }
 `;
@@ -176,22 +183,20 @@ export const GET_ALL_SERVICES = gql`
       }
       title
       description
+      slug
     }
   }
 `;
 
-// export const GET_SERVICE_DETAIL = gql`
-//   query GetServiceDetail($slug: String!) {
-//     service(where: { slug: $slug }) {
-//       content {
-//         html
-//       }
-//       description
-//       image {
-//         url
-//       }
-//       title
-//       slug
-//     }
-//   }
-// `;
+export const GET_SERVICE_DETAIL = gql`
+  query GetServiceDetail($slug: String = "") {
+    service(where: { slug: $slug }) {
+      title
+      image {
+        url
+      }
+      description
+      slug
+    }
+  }
+`;

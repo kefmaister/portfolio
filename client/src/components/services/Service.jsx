@@ -2,6 +2,7 @@ import React from "react";
 import { GET_ALL_SERVICES } from "../../graphql/queries";
 import { useQuery } from "@apollo/client";
 import {
+  Box,
   Card,
   CardActionArea,
   CardContent,
@@ -10,10 +11,19 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import styles from "./service.module.css";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Service() {
   const { loading, error, data } = useQuery(GET_ALL_SERVICES);
-  if (loading) return <p>Loading...</p>;
+  if (loading)
+    return (
+      <Box
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <CircularProgress />
+      </Box>
+    );
+
   if (error) return <p>Error: {error.message}</p>;
   const services = data.services;
 
@@ -25,7 +35,11 @@ export default function Service() {
         {services.map((service, index) => (
           <Link
             className={styles.cardLink}
-            to={`/service/${service.slug}`}
+            to={
+              service.title === "Developer"
+                ? "/projects"
+                : `/service/${service.slug}`
+            }
             key={index}
             style={{ textDecoration: "none" }}
           >

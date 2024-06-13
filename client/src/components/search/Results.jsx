@@ -21,7 +21,13 @@ const SearchResults = () => {
           if (searchResults[key] && searchResults[key].length > 0) {
             return (
               <div key={key}>
-                <h2>{key}</h2>
+                {key === "skillsets" ? (
+                  <Link to="/skills">
+                    <h2>{key}</h2>
+                  </Link>
+                ) : (
+                  <h2>{key}</h2>
+                )}
                 {searchResults[key].map((item, index) => (
                   <div key={index}>
                     {key === "projects" && (
@@ -30,6 +36,18 @@ const SearchResults = () => {
                       </Link>
                     )}
                     {key === "skillsets" && <h3>{item.name}</h3>}
+                    {key === "services" && (
+                      <Link
+                        to={
+                          item.slug === "developer"
+                            ? "/projects"
+                            : `/service/${item.slug}`
+                        }
+                      >
+                        {" "}
+                        <h3 className={styles.title}>{item.title}</h3>
+                      </Link>
+                    )}
                   </div>
                 ))}
               </div>

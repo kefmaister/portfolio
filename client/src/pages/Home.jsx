@@ -2,6 +2,7 @@ import React from "react";
 import Jumbotron from "../components/jumbotron/Jumbotron";
 import Projects from "../components/projects/Projects";
 import Datas from "../components/blogs/DataViewer";
+import Service from "../components/services/Service";
 export default function Home() {
   return (
     <div className="background-top">
@@ -9,11 +10,11 @@ export default function Home() {
         <Jumbotron />
       </section>
       <section>
-        <h1>What i want</h1>
-        <Projects />
+        <h1 className="header">What i want</h1>
+        {/* <Projects /> */}
       </section>
       <section>
-        <Datas />
+        <Service />
       </section>
     </div>
   );

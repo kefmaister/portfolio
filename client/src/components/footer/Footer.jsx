@@ -34,9 +34,9 @@ export default function Footer() {
       <div className={style.menuOptions}>
         <h2>Menu</h2>
         <div className={style.menuContainer}>
-          <Link to="/about">About Me</Link>
+          <Link to="/about-me">About Me</Link>
           <Link to="/projects">Projects</Link>
-          <Link to="/skills">Knowledge</Link>
+          <Link to="/skills">Skills</Link>
           <Link to="/services">Services</Link>
         </div>
       </div>

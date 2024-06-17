@@ -20,7 +20,7 @@ export const ROUTES = {
     title: "Service Detail",
   },
   about: {
-    path: "/about",
+    path: "/about-me",
     title: "About Me",
   },
   searchResults: {

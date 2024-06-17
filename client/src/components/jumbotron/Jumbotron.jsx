@@ -23,7 +23,7 @@ export default function Jumbotron() {
           in various fields:
         </p>
         <ul>
-          <li>Graduate in Programming</li>
+          <li>Associate Degree in Programming</li>
           <li>Bachelor Audiovisual Design</li>
         </ul>
         <p className={style.content}>

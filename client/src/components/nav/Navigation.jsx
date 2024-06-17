@@ -41,7 +41,7 @@ export default function Navigation() {
             </ListItemButton>
           </ListItem>
         </Link>
-        <Link to="/about">
+        <Link to="/about-me">
           <ListItem disablePadding>
             <ListItemButton key={"key-course"}>
               <ListItemText primary="About Me" />
@@ -58,7 +58,7 @@ export default function Navigation() {
         <Link to="/skills">
           <ListItem disablePadding>
             <ListItemButton key={"key-skills"}>
-              <ListItemText primary="Knowledge" />
+              <ListItemText primary="Skills" />
             </ListItemButton>
           </ListItem>
         </Link>

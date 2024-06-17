@@ -49,9 +49,14 @@ section {
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: var(--white);
   flex-wrap: wrap;
+}
+@media screen and (max-width: 430px) {
+  footer {
+    justify-content: space-between;
+  }
 }
 h1 {
   font-size: 35px;
@@ -76,7 +81,7 @@ video {
   font-size: 8rem;
   text-align: center;
 
-  color: var(--dark-orange);
+  color: var(--orange);
 }
 @media screen and (max-width: 990px) {
   .header {
@@ -126,6 +131,9 @@ p {
   gap: 5rem;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
+}
+.table-container {
   margin-bottom: 5rem;
 }
 .notFound {

@@ -5,14 +5,15 @@
 }
 .menuContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 16rem;
+  row-gap: 1rem;
 }
 
 .menuContainer > * {
-  width: calc(50% - 0.1rem);
+  /* width: calc(50% - 0.1rem); */
   text-decoration: none;
 }
 .menuContainer > *:hover {
@@ -23,6 +24,7 @@
   flex-direction: column;
   align-self: flex-start;
   margin: 1rem 0;
+  width: 5rem;
 }
 .menuOptions a {
   color: var(--white);

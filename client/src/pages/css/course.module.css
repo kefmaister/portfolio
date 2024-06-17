@@ -12,13 +12,16 @@
 }
 .articleContainer {
   display: flex;
-  gap: 3rem;
+  gap: 1rem 6rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 .articleContainer div {
-  width: 45rem;
+  width: 41rem;
   padding: 2rem 1rem;
+}
+.articleContainer p{
+  text-align: justify;
 }
 .articleContainer div:nth-child(2) {
   display: flex;
@@ -37,6 +40,6 @@
 }
 
 .image {
-  height: 35rem;
+  height: 40rem;
   object-fit: cover;
 }

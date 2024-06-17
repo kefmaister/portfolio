@@ -19,7 +19,7 @@ export default function Team() {
   const skills = data.skillsets;
   return (
     <div>
-      <h1 className="header">Knowledge</h1>
+      <h1 className="header">Skills</h1>
       <div className="member-container">
         {[...skills]
           .sort((a, b) => a.name.localeCompare(b.name))

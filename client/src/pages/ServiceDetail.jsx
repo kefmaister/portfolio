@@ -66,20 +66,30 @@ export default function DetailPage({ type }) {
       details: [
         {
           location: "Weddings",
-          description: "Helping out serving the guest the diffrent dishes.",
+          description: "Helping out serving the guest the different dishes",
         },
         {
           location: "Private events",
-          description: "Helping out serving the guest the diffrent dishes. Helping with setting up and breaking down",
+          description:
+            "Helping out serving the guest the different dishes, helping with setting up and breaking down",
         },
       ],
     },
     {
       title: "Driver",
       details: [
-        { location: "Airport", description: "Driving to and picking up from" },
-        { location: "Restaurants", description: "Driving to and picking up from" },
-        { location: "Special events", description: "Driving to and picking up from" },
+        {
+          location: "Airport",
+          description: "Driving to and picking up from location",
+        },
+        {
+          location: "Restaurants",
+          description: "Driving to and picking up from location",
+        },
+        {
+          location: "Special events",
+          description: "Driving to and picking up from location",
+        },
       ],
     },
   ];
@@ -111,12 +121,15 @@ export default function DetailPage({ type }) {
       ) : (
         <>
           <h1 className="header">{data.service.title}</h1>
-          <Table>
+          <Table className="table-container">
             {row.map((section, index) => (
               <React.Fragment key={index}>
-                <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
+                <TableRow
+                  sx={{ "& > *": { borderBottom: "unset" } }}
+                  onClick={() => handleClick(index)}
+                >
                   <TableCell>
-                    <IconButton size="small" onClick={() => handleClick(index)}>
+                    <IconButton size="small">
                       {open[index] ? (
                         <KeyboardArrowUpIcon />
                       ) : (
@@ -145,10 +158,14 @@ export default function DetailPage({ type }) {
                         <Table size="small" aria-label="details">
                           <TableHead>
                             <TableRow>
-                              <TableCell style={{ fontWeight: "bold" }}>
+                              <TableCell
+                                style={{ fontWeight: "bold", width: "20%" }}
+                              >
                                 Location
                               </TableCell>
-                              <TableCell style={{ fontWeight: "bold" }}>
+                              <TableCell
+                                style={{ fontWeight: "bold", width: "80%" }}
+                              >
                                 Description
                               </TableCell>
                             </TableRow>
@@ -156,10 +173,16 @@ export default function DetailPage({ type }) {
                           <TableBody>
                             {section.details.map((detailRow) => (
                               <TableRow key={detailRow.location}>
-                                <TableCell component="th" scope="row">
+                                <TableCell
+                                  component="th"
+                                  scope="row"
+                                  style={{ width: "20%" }}
+                                >
                                   {detailRow.location}
                                 </TableCell>
-                                <TableCell>{detailRow.description}</TableCell>
+                                <TableCell style={{ width: "80%" }}>
+                                  {detailRow.description}
+                                </TableCell>
                               </TableRow>
                             ))}
                           </TableBody>

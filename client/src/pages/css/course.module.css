@@ -38,4 +38,5 @@
 
 .image {
   height: 35rem;
+  object-fit: cover;
 }

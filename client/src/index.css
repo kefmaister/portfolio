@@ -40,7 +40,7 @@ nav {
   }
 }
 .footerLogo {
-  width: 20rem;
+  width: 12rem;
 }
 section {
   margin: 0 auto;
@@ -107,7 +107,7 @@ p {
   gap: 3rem;
 }
 .project-container {
-  margin: 0;
+  margin: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;

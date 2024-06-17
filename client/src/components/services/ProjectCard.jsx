@@ -10,10 +10,16 @@ import { Tooltip } from "@mui/material";
 
 export default function ProjectCard({ data }) {
   return (
-    <Card sx={{ display: "flex", width: "50rem" }}>
+    <Card
+      sx={{
+        display: "flex",
+        width: "50rem",
+        flexDirection: { xs: "column", md: "row" },
+      }}
+    >
       <CardMedia
         component="img"
-        sx={{ width: 200 }}
+        sx={{ width: { md: 200 } }}
         image={data.image.url}
         alt={data.title}
       />
@@ -30,18 +36,20 @@ export default function ProjectCard({ data }) {
             {data.description}
           </Typography>
         </CardContent>
-        <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
-          {[...data.skillsets] // Create a shallow copy of the array
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((skill) => (
-              <Tooltip title={skill.name} key={skill.name}>
-                <Avatar
-                  alt={skill.name}
-                  src={skill.logo.url}
-                  sx={{ width: 30, height: 30, marginRight: 1 }}
-                />
-              </Tooltip>
-            ))}
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <Box sx={{ display: "flex", alignItems: "center", pl: 1, pb: 1 }}>
+            {[...data.skillsets] // Create a shallow copy of the array
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((skill) => (
+                <Tooltip title={skill.name} key={skill.name}>
+                  <Avatar
+                    alt={skill.name}
+                    src={skill.logo.url}
+                    sx={{ width: 30, height: 30, marginRight: 1 }}
+                  />
+                </Tooltip>
+              ))}
+          </Box>
           <Box sx={{ marginLeft: "auto", pr: 1, pb: 1 }}>
             <ViewBtn
               mr={"2rem"}

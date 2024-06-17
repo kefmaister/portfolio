@@ -23,12 +23,11 @@ export default function Jumbotron() {
           in various fields:
         </p>
         <ul>
-          <li>Graduate in programming</li>
-          <li>Bachlor Audiovisual Design</li>
+          <li>Graduate in Programming</li>
+          <li>Bachelor Audiovisual Design</li>
         </ul>
         <p className={style.content}>
-          Bekijk <span className={style.bolder}> mijn projecten </span>op deze
-          website!
+          See <span className={style.bolder}> my projects </span> here!
         </p>
         <ViewBtn link={"/projects"} text={"View projects"} />
       </div>

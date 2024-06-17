@@ -9,7 +9,7 @@ export default function Home() {
       </section>
       <section>
         <h1 className="header">What i want</h1>
-        <video width="100%" height="auto" autoPlay loop muted>
+        <video width="100%" autoPlay loop muted>
           <source src="/assets/video/comingSoon.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

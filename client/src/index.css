@@ -59,6 +59,19 @@ h1 {
   line-height: 150%;
   margin-bottom: 1rem;
 }
+video {
+  height: 33rem;
+}
+@media screen and (max-width: 990px) {
+  video {
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  video {
+    height: 15rem;
+  }
+}
 .header {
   font-size: 8rem;
   text-align: center;

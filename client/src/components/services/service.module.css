@@ -9,6 +9,11 @@
   margin: 0 5rem;
   height: 100%;
 }
+@media screen and (max-width: 430px) {
+  .card {
+    margin: 0 2rem;
+  }
+}
 .cardLink {
   margin-bottom: 3rem;
 }

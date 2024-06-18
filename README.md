@@ -1,2 +1,1 @@
-# portfolio
-Coding to display my projects and skills.
+# ProjectArtevelde-portfolio

@@ -50,7 +50,7 @@ export const GET_PROJECT_DETAIL = gql`
 
 export const GET_ALL_SKILLS = gql`
   query GetAllSkills {
-    skillsets {
+    skillsets(first: 25) {
       level
       logo {
         url

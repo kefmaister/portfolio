@@ -26,17 +26,20 @@ export default function Team() {
           .map((skill, index) => (
             <Card
               key={`skill - ${index}`}
-              sx={{ maxWidth: 345, background: "none" }}
+              sx={{ maxWidth: 300, background: "none", width: "150px" }}
             >
               <CardMedia
                 component="img"
-                width="140"
+                className="skill-logo"
                 image={skill.logo.url}
                 alt={skill.name}
               />
               <CardContent>
                 <Typography
-                  sx={{ color: isDarkMode ? "white" : "" }}
+                  sx={{
+                    color: isDarkMode ? "white" : "",
+                    marginBottom: 0,
+                  }}
                   gutterBottom
                   variant="h5"
                   component="div"
@@ -47,11 +50,13 @@ export default function Team() {
                   sx={{
                     width: "100%",
                     display: "flex",
-                    justifyContent: "center",
+                    "& .MuiRating-iconEmpty svg": {
+                      color: isDarkMode ? "white" : "black",
+                    },
                   }}
-                  name="customized-10"
+                  name="half-rating"
                   value={skill.level}
-                  max={10}
+                  max={5}
                   readOnly
                 />
               </CardContent>

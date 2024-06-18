@@ -107,6 +107,17 @@ p {
   gap: 5rem;
 }
 
+.member-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+}
+
+.member-container div img {
+  width: 4rem;
+  /* padding-top: 2rem; */
+}
 .background-top {
   background-image: url("./assets/svg/Blue.svg");
   background-position: right -8vw top 21vh;

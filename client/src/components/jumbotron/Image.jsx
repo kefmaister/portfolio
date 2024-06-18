@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import style from "./jumbotron.module.css";
 import { gsap } from "gsap";
 
